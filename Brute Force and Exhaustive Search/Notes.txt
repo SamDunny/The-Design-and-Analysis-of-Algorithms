@@ -1,0 +1,65 @@
+Selection Sort:
+    Description: repetitively search for the smallest value in a list, moving index by index
+    Time Efficiency: O(n^2)
+    Memory Efficiency: O(1)
+
+Bubble Sort:
+    Description: repetitively compare and swap neighboring values in a list until sorted
+    Time Efficiency: O(n^2)
+    Memory Efficiency: O(1)
+
+Sequential Search:
+    Description: successively compares elements with a key until a match is found or the list is exhausted
+    Time Efficiency: O(n)
+    Memory Efficiency: O(1)
+
+Brute-Force String Matching:
+    Description: searches a string of length N for a substring of length M (M <= N)
+    Time Efficiency: O(NM)
+    Memory Efficiency: O(1)
+
+Exhaustive Search:
+    Description: generate each and every element of the problem domain, select those that satisfy constraints,
+                 and then find a desired element
+    Time Efficiency: varies (typically O(2^n))
+    Memory Efficiency: O(1)
+
+Depth-First Search (DFS):
+    Description: searches through a graph by visiting a node, processing, and then visiting adjacent nodes on at a time 
+                 and repeating this process. When a dead-end is encountered (no adjacent nodes), the algorithm goes
+                 back to the previous vertex, and continues. Algorithm ends when a condition is met or we return
+                 to the original node and cannot visit anymore adjacent nodes. Typically use stacks
+    Time Efficiency: varies (typically O(2^n) for binary trees)
+    Memory Efficiency: O(n) (if using stack)
+
+Breadth-First Search (BFS):
+    Description: searches through a graph by visiting a node, processing, and then visiting all adjacent nodes before visiting
+                 going to those adjacent nodes adjacent nodes. Typically uses a queue
+    Time Efficiency: varies (typically O(2^n) for binary trees)
+    Memory Efficiency: O(n) (if using queue)
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Closest Pair Problem (Brute Force Solution):
+    Description: assuming a 2D space, determine the closest distance any two points share
+    Solution: for all point pairs in the set, calulate the Euclidean distance (a^2 + b^2 = c^2)
+              and determine smallest value. A minor enhancement can be made by skipping the sqrt
+              calculation, as sqrt is a strictly increasing function. This solution would require
+              two for-loops to compare all points, but no extra memory 
+    Time Efficiency: O(n^2)
+    Memory Efficiency: O(1)
+
+Traveling Salesmen Problem (Brute Force Solution):
+    Description: find the shortest tour through a given set of n cities that visits each city exactly
+                 once before returning to the city where you started
+    Solution: compute all permutations of n-1 intermediate cities, choose the permutation that has the smallest length
+    Time Efficiency: O(n!)
+    Memory Efficiency: O(1)
+
+Knapsack Problem (Brute Force Solution):
+    Description: given n items of known weights w and values v, and a knapsack with capacity W,
+                 find the most valuable subset of the items that fit into the knapsack
+    Solution: compute all subsets of the set of n items, calculating the respective weight and value for each subset,
+              identify all subsets with a an appropriate weight, and find the highest value of those remaining
+    Time Efficiency: O(2^n)
+    Memory Efficiency: O(1)
